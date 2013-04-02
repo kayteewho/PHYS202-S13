@@ -4,3 +4,14 @@ Project:20%
 MidtermExam:20%
 FInalExam:20%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  I pledge on my honor that I have not given
+%  or received any unauthorized assistance
+%  on this assignment/examination.
+%
+%  Signed: Katie Hu
+%  Dated: <Date>
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
