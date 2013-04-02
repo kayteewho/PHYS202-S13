@@ -1,10 +1,3 @@
-Exercises:10%
-Assignments:30%
-Project:20%
-MidtermExam:20%
-FInalExam:20%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  I pledge on my honor that I have not given
