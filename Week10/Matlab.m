@@ -71,34 +71,37 @@ plot(x,y)
 
 %function to fit
 fun = @(a,b,c,x) - sqrt(a^2-(x-b).^2)+c;
+figure(2)
+errorbar(e,y,ey,'g.')
 % Find a starting point for the parameters a, b, and c.
 guess = fun(15,0,15,x); % fun(a,b,c,x)
 plot(x,guess,'r:')
 
 %fit the data
-%fittedmodel = fit(x',y',fun,'StartPoint',[15 0 15])
+fittedmodel = fit(x',y',fun,'StartPoint',[15 0 15])
+
+disp(fittedmodel);
 %plot the result
-%plot(fittedmodel,'r-');
+plot(fittedmodel,'r-');
 
-%fittedmodel = 
-
-   % General model:
-   % fittedmodel(x) = -sqrt(a^2-(x-b).^2)+c
-    %Coefficients (with 95 %confidencebounds):
-       % a=  26.62 (18.39,34.85)
-        %b=  1.714 (-0.5507,3.978)
-        %c=  26.55 (18.56, 34.54)
-        %fit the data using the uncertainties as weights
-        %w=  ey.^-2
-        %weightedfitted = fit(x',y',fun,'StartPoint',[15 0 15],'Weights',w')
-        % plot the result
-        %plot(weightedfit,'r-');
+w=  ey.^-2
+weightedfitted = fit(x',y',fun,'StartPoint',[15 0 15],'Weights',w')
+% plot the result
+plot(weightedfit,'r-');
         
 %Exercise 2
 
 experiment = importdata('radioactivedecay.dat')
 t = experiment.data(:,1);
 N = experiment.data(:,2);
+fun1 = @(a,b,c,x) b*exp(-a*x)+c;
 figure(42)
-plot(t,N,'.b')
+plot(t,N,'b.');
+figure(53)
+plot(t,N,'b.');
+%plot the result
+plot(fittedmodel,'b-',t,N,'b.');
+legend('radioactive data','curvefit')
+xlabel('time(s)')
+ylabel('# decays')
 
